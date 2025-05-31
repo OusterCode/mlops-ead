@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/vitor/OneDrive/Documentos/My%20eBooks/ESTUDOS/ESPECIAIZA%C3%87%C3%83O/Inteligencia%20Artificial%20e%20Machine%20Learning/03%20-%20Cultura%20e%20Pr%C3%A1ticas%20Dataops%20e%20Mlops/mlruns/0/9c5251b78ac5444383f8cb86c143e4f2/artifacts
+end_time: 1748713231019
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9c5251b78ac5444383f8cb86c143e4f2
+run_name: experiment_mlops_ead
+run_uuid: 9c5251b78ac5444383f8cb86c143e4f2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748713227578
+status: 3
+tags: []
+user_id: vitor
