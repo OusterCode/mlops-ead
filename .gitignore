@@ -18,4 +18,13 @@ mlruns/0/f7e072d6c6344233aa873fe683542c89/tags/mlflow.source.type
 mlruns/0/f7e072d6c6344233aa873fe683542c89/tags/mlflow.user
 .vscode/settings.json
 .gitignore
+
+PRATICA/__pycache__/main.cpython-310.pyc
+PRATICA/__pycache__/train2.cpython-310.pyc
+mlruns/0/a71507de50c04855a6947bb31524887c/meta.yaml
+mlruns/0/a71507de50c04855a6947bb31524887c/tags/mlflow.runName
+mlruns/0/a71507de50c04855a6947bb31524887c/tags/mlflow.source.name
+mlruns/0/a71507de50c04855a6947bb31524887c/tags/mlflow.source.type
+mlruns/0/a71507de50c04855a6947bb31524887c/tags/mlflow.user
+PRATICA/app/__pycache__/main.cpython-310.pyc
 PRATICA/__pycache__/train2.cpython-310.pyc
