@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install fastapi uvicorn[standard] mlflow scikit-learn pandas matplotlib pytest pycodestyle tensorflow
+          pip install fastapi uvicorn[standard] mlflow scikit-learn pandas matplotlib pytest pycodestyle tensorflow numpy
 
       - name: Test files
         run: |
