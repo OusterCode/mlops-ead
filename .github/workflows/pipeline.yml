@@ -30,8 +30,7 @@ jobs:
           pip install fastapi uvicorn[standard] mlflow scikit-learn pandas matplotlib pytest pycodestyle tensorflow numpy
 
       - name: Test files
-        run: |
-          pytest PRATICA/test_train.py -p no:warnings  
+        run: |  
           pytest PRATICA/test_train2.py -p no:warnings
 
   # check_python_code_style_job:

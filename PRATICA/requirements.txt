@@ -7,3 +7,4 @@ matplotlib
 pytest
 pycodestyle
 tensorflow
+numpy
