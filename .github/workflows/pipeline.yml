@@ -31,8 +31,8 @@ jobs:
 
       - name: Test files
         run: |
-          pytest test_train.py -p no:warnings
-          pytest test_train2.py -p no:warnings
+          pytest PRATICA/test_train.py -p no:warnings
+          pytest PRATICA/test_train2.py -p no:warnings
 
   check_python_code_style_job:
     runs-on: ubuntu-latest
