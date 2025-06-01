@@ -1,5 +1,4 @@
 name: Train-Pipeline
-
 on:
   push:
   pull_request:
