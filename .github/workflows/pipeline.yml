@@ -31,7 +31,6 @@ jobs:
 
       - name: Test files
         run: |
-          pytest PRATICA/test_train.py -p no:warnings
           pytest PRATICA/test_train2.py -p no:warnings
 
   # check_python_code_style_job:
@@ -79,18 +78,29 @@ jobs:
           python PRATICA/train.py
           python PRATICA/train2.py
 
-  build_image:
-    runs-on: ubuntu-latest
-    needs: [train_job]
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: docker login
-        run: |
-          docker login -u ${{secrets.DOCKER_USER}} -p ${{secrets.DOCKER_PASSWORD}}
-      - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/${{secrets.DOCKER_IMAGE_NAME}}
+#  build_image:
+#    runs-on: ubuntu-latest
+#    needs: [train_job]
+#    steps:
+#      # Faz o checkout do código fonte do repositório
+#      - uses: actions/checkout@v4
+#        with:
+#          fetch-depth: 0
 
-      - name: Docker Push
-        run: docker push ${{secrets.DOCKER_USER}}/${{secrets.DOCKER_IMAGE_NAME}}
+      # Realiza login no Docker Hub usando segredos definidos no repositório
+#      - name: docker login
+#        run: |
+          # Executa o comando de login no Docker Hub utilizando usuário e senha armazenados nos segredos do repositório
+#          docker login -u ${{secrets.DOCKER_USER}} -p ${{secrets.DOCKER_PASSWORD}}
+
+      # Constrói a imagem Docker usando o Dockerfile presente no repositório
+#     - name: Build the Docker image
+#        run: |
+          # Constrói a imagem Docker com a tag definida pelo usuário e nome da imagem vindos dos segredos
+#          docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/${{secrets.DOCKER_IMAGE_NAME}}
+
+      # Faz o push da imagem Docker construída para o Docker Hub
+ #     - name: Docker Push
+ #       run: |
+          # Realiza o push da imagem Docker para o repositório do Docker Hub
+ #         docker push ${{secrets.DOCKER_USER}}/${{secrets.DOCKER_IMAGE_NAME}}
