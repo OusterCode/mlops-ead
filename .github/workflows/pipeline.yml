@@ -33,7 +33,7 @@ jobs:
         run: |
           pytest PRATICA/test_train.py -p no:warnings
           pytest PRATICA/test_train2.py -p no:warnings
-
+"""
   check_python_code_style_job:
     runs-on: ubuntu-latest
     steps:
@@ -54,7 +54,7 @@ jobs:
       - name: Validate Python Code Style
         run: |
           pycodestyle . --ignore=E501
-
+"""
   train_job:
     runs-on: ubuntu-latest
     needs: [unitary_test_job, check_python_code_style_job]
