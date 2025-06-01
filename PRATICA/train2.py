@@ -36,6 +36,7 @@ def read_data() -> tuple[pd.DataFrame, pd.Series]:
     y = data["fetal_health"]
     return X, y
 
+
 def process_data(X: pd.DataFrame, y: pd.Series):
     """Padroniza e divide os dados."""
     columns_names = list(X.columns)
@@ -97,6 +98,7 @@ def train_model(model: Sequential, X_train, y_train, is_train=True):
             validation_split=0.2,
             verbose=3
         )
+
 
 if __name__ == "__main__":
     reset_seeds()
