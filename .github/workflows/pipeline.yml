@@ -93,5 +93,3 @@ jobs:
 
       - name: Docker Push
         run: docker push ${{secrets.DOCKER_USER}}/${{secrets.DOCKER_IMAGE_NAME}}
-=======
->>>>>>> b5b7364b0986e003ed28c84cac255d678189c7db
