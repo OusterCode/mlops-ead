@@ -75,8 +75,8 @@ jobs:
 
       - name: Train Model
         run: |
-          python train.py 
-          python train2.py
+          python PRATICA/train.py
+          python PRATICA/train2.py
 
   build_image:
     runs-on: ubuntu-latest
