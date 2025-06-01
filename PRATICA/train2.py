@@ -55,6 +55,8 @@ def process_data(X: pd.DataFrame, y: pd.Series):
 
 def create_model(X_train: pd.DataFrame) -> Sequential:
     """Cria o modelo Keras."""
+    if X_train.empty:
+        raise ValueError("X_train está vazio. Não é possível criar o modelo.")
     reset_seeds()
     model = Sequential([
         InputLayer(shape=(X_train.shape[1], )),
