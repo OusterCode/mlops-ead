@@ -2,7 +2,6 @@ from locust import HttpUser, task, between
 import random
 
 
-
 class ApiLoadRunner(HttpUser):
     """
     Sends a POST request to the '/predict' endpoint with a JSON payload.
