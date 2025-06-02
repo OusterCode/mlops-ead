@@ -131,9 +131,9 @@ mlflow.tensorflow.autolog(log_models=True,
 """# 6 - Executando o treino do modelo"""
 
 with mlflow.start_run(run_name='experiment_mlops_ead_Aluno') as run:
-  model.fit(X_train,
-            y_train,
-            epochs=50,
-            validation_split=0.2,
-            verbose=3)
-
+    model.fit(X_train,
+              y_train,
+              epochs=50,
+              validation_split=0.2,
+              verbose=3)
+    

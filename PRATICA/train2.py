@@ -2,7 +2,6 @@ import os
 import random
 import numpy as np
 import tensorflow as tf
-from tensorflow import keras
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, InputLayer
 import mlflow
@@ -36,6 +35,7 @@ def read_data() -> tuple[pd.DataFrame, pd.Series]:
     y = data["fetal_health"]
     return X, y
 
+
 def process_data(X: pd.DataFrame, y: pd.Series):
     """Padroniza e divide os dados."""
     columns_names = list(X.columns)
@@ -55,6 +55,8 @@ def process_data(X: pd.DataFrame, y: pd.Series):
 
 def create_model(X_train: pd.DataFrame) -> Sequential:
     """Cria o modelo Keras."""
+    if X_train.empty:
+        raise ValueError("X_train está vazio. Não é possível criar o modelo.")
     reset_seeds()
     model = Sequential([
         InputLayer(shape=(X_train.shape[1], )),
@@ -96,6 +98,7 @@ def train_model(model: Sequential, X_train, y_train, is_train=True):
             verbose=3
         )
 
+
 if __name__ == "__main__":
     reset_seeds()
     X, y = read_data()
@@ -103,3 +106,4 @@ if __name__ == "__main__":
     model = create_model(X_train)
     config_mlflow()
     train_model(model, X_train, y_train)
+    

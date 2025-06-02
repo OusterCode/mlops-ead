@@ -1,4 +1,6 @@
 from locust import HttpUser, task, between
+import random
+
 
 
 class ApiLoadRunner(HttpUser):
@@ -19,9 +21,9 @@ class ApiLoadRunner(HttpUser):
             "Content-Type": "application/json"
         }
         request_body = {
-            "accelerations": 0,
-            "fetal_movement": 0,
-            "uterine_contractions": 0,
-            "severe_decelerations": 0
+            "accelerations": random.uniform(-1, 1),
+            "fetal_movement": random.uniform(-1, 1),
+            "uterine_contractions": random.uniform(-1, 1),
+            "severe_decelerations": random.uniform(-1, 1)
         }
         self.client.post('/predict', json=request_body, headers=headers)
