@@ -8,3 +8,4 @@ pytest
 pycodestyle
 tensorflow
 numpy
+locust
